@@ -7,7 +7,15 @@ const path = require('path')
 const item = require('./routes/api/item');
 
 require('dotenv').config();
+const env = {
+    PORT: process.env.PORT,
+    MONGO_URI: process.env.MONGO_URI,
+    MONGO_DB_NAME: process.env.MONGO_DB_NAME,
+    NODE_ENV: process.env.NODE_ENV,
 
+}
+
+console.log (env.NODE_ENV)
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -21,7 +29,7 @@ app.use(express.urlencoded({ extended: false }));
 
 //MongoDB Connection
 mongoose
-    .connect('mongodb+srv://jkdelara:lucario290@cluster0-kapin.azure.mongodb.net/test?retryWrites=true&w=majority', {
+    .connect( env.MONGO_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
@@ -29,10 +37,6 @@ mongoose
     .catch(err => console.log(err));
 
 //use Routes
-app.get('/', (req, res) => {
-    res.json({"message": "HELLO"})
-
-});
 app.use('/api/item', item);
 
 if(process.env.NODE_ENV === 'production') {
