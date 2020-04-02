@@ -2,7 +2,7 @@
   "name": "fitnesstrackerapp",
   "version": "1.0.0",
   "description": "Web application for tracking fitness progress.",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "client-install": "npm install --prefix client",
     "start": "node server.js",
