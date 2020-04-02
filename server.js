@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 
 //MongoDB Connection
 mongoose
-    .connect(process.env.ATLAS_URI, {
+    .connect('mongodb+srv://jkdelara:lucario290@cluster0-kapin.azure.mongodb.net/test?retryWrites=true&w=majority', {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
