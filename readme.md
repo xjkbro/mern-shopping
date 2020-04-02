@@ -1,8 +1,7 @@
-# RepTracker
+# Shopping List
 
-MERN Stack application to track and manage workouts.
+A basic mern stack application hosted on heroku
 
-[RepTracker](https://github.com/xjkbro/RepTracker.git)
 
 ## Getting Started
 
@@ -21,7 +20,7 @@ What things you need to install the application
 1. Clone the repo
 
 ```
-git clone https://github.com/xjkbro/RepTracker.git
+git clone https://github.com/xjkbro/mern-shopping.git
 ```
 
 2. Open Project Folder
